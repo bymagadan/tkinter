@@ -1,0 +1,25 @@
+import tkinter as tk
+
+window = tk.Tk()
+window.title("txt. redactor by Dmitry")
+
+window.rowconfigure(0, minsize=750, weight=1)
+window.columnconfigure(1, minsize=850, weight=1)
+
+txt_edit = tk.Text(window)
+a_buttons = tk.Frame(window)
+b_open = tk.Button(a_buttons, text="Open")
+c_save = tk.Button(a_buttons, text="Save as...")
+
+b_open.grid(row=0, column=0, sticky="ew", padx=50, pady=50)
+c_save.grid(row=1, column=0, sticky="ew", padx=50)
+
+a_buttons.grid(row=0, column=0, sticky="ns")
+txt_edit.grid(row=0, column=1, sticky="nsew")
+
+a_buttons.configure(background="Olive")
+b_open.configure(background="DarkOliveGreen")
+c_save.configure(background="DarkOliveGreen")
+txt_edit.configure(background="DarkOliveGreen")
+
+window.mainloop()
